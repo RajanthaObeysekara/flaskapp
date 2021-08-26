@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag latest
+      run: docker build -t flaskapp:latest -f myDockerfile .
     - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
